@@ -45,7 +45,7 @@ function VoiceAssistant() {
         endpoint = "forecast";
       }
 
-      const res = await axios.post(`http://localhost:8000/${endpoint}`, { city: userQuery });
+      const res = await axios.post(`https://weather-ai-agent-backend.onrender.com/${endpoint}`, { city: userQuery });
       const systemResponse = res.data.response;
 
       setHistory((prev) => prev.slice(0, -1));
